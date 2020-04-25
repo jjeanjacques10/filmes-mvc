@@ -13,12 +13,28 @@
 
 <body>
 
-	<h1>Filmes</h1>
-	<table border="1">
+	<h1 style="font-size: 16px">Filmes</h1>
+	<table class="table table-dark">
+		<thead>
+			<tr>
+				<th scope="col">#</th>
+				<th scope="col">imagemCartaz</th>
+				<th scope="col">nome</th>
+				<th scope="col">anoLancamento</th>
+				<th scope="col">classificacaoIndicativa</th>
+				<th scope="col">duracao</th>
+				<th scope="col">generos</th>
+				<th scope="col">diretores</th>
+				<th scope="col">atoresPrincipais</th>
+				<th scope="col">notaImdb</th>
+				<th scope="col">sinopse</th>
+				<th scope="col">botao</th>
+			</tr>
+		</thead>
 		<c:forEach items="${filmes}" var="filme">
 			<tr>
-				<td>${filme.id}</td>
-				<td><img src="${filme.imagemCartaz}" width="120" height="120" alt="Minha Figura"></td>
+				<td scope="row">${filme.id}</td>
+				<td><img src="${filme.imagemCartaz}" width="120" height="auto" alt="Minha Figura"></td>
 				<td>${filme.nome}</td>
 				<td>${filme.anoLancamento}</td>
 				<td>${filme.classificacaoIndicativa}</td>

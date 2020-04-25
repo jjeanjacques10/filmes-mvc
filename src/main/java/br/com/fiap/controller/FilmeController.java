@@ -25,7 +25,7 @@ public class FilmeController {
 	@GetMapping("/{id}")
 	public String findById(@PathVariable("id") long id, Model model) {
 
-		//model.addAttribute("filme", repository.findById(id));
+		model.addAttribute("filme", repository.findById(id));
 		return "filme-detalhe";
 	}
 
