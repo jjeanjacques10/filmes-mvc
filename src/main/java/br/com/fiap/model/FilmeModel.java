@@ -1,28 +1,48 @@
 package br.com.fiap.model;
 
-public class FilmeModel {
-	private String nome;
-	private String sinopse;
-	private String duracao;
-	private int classificacaoIndicativa;
-	private int AnoLancamento;
-	private String[] generos;
-	private String[] atoresPrincipais;
-	private String diretor;
-	private Double notaImdb;
+import java.util.Arrays;
 
-	public FilmeModel(String nome, String sinopse, String duracao, int classificacaoIndicativa, int anoLancamento,
-			String[] generos, String[] atoresPrincipais, String diretor, Double notaImdb) {
+public class FilmeModel {
+	long id;
+	String nome;
+	int anoLancamento;
+	int classificacaoIndicativa;
+	String duracao;
+	String generos;
+	String diretores;
+	String atoresPrincipais;
+	Double notaImdb;
+	String sinopse;
+
+	public FilmeModel(long id, String nome, int anoLancamento, int classificacaoIndicativa, String duracao,
+			String generos, String diretores, String atoresPrincipais, Double notaImdb, String sinopse) {
 		super();
+		this.id = id;
 		this.nome = nome;
-		this.sinopse = sinopse;
-		this.duracao = duracao;
+		this.anoLancamento = anoLancamento;
 		this.classificacaoIndicativa = classificacaoIndicativa;
-		AnoLancamento = anoLancamento;
+		this.duracao = duracao;
 		this.generos = generos;
+		this.diretores = diretores;
 		this.atoresPrincipais = atoresPrincipais;
-		this.diretor = diretor;
 		this.notaImdb = notaImdb;
+		this.sinopse = sinopse;
+	}
+
+	@Override
+	public String toString() {
+		return "FilmeModel [id=" + id + ", nome=" + nome + ", anoLancamento=" + anoLancamento
+				+ ", classificacaoIndicativa=" + classificacaoIndicativa + ", duracao=" + duracao + ", generos="
+				+ generos + ", diretores=" + diretores + ", atoresPrincipais=" + atoresPrincipais + ", notaImdb="
+				+ notaImdb + ", sinopse=" + sinopse + "]";
+	}
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
 	}
 
 	public String getNome() {
@@ -33,20 +53,12 @@ public class FilmeModel {
 		this.nome = nome;
 	}
 
-	public String getSinopse() {
-		return sinopse;
+	public int getAnoLancamento() {
+		return anoLancamento;
 	}
 
-	public void setSinopse(String sinopse) {
-		this.sinopse = sinopse;
-	}
-
-	public String getDuracao() {
-		return duracao;
-	}
-
-	public void setDuracao(String duracao) {
-		this.duracao = duracao;
+	public void setAnoLancamento(int anoLancamento) {
+		this.anoLancamento = anoLancamento;
 	}
 
 	public int getClassificacaoIndicativa() {
@@ -57,36 +69,36 @@ public class FilmeModel {
 		this.classificacaoIndicativa = classificacaoIndicativa;
 	}
 
-	public int getAnoLancamento() {
-		return AnoLancamento;
+	public String getDuracao() {
+		return duracao;
 	}
 
-	public void setAnoLancamento(int anoLancamento) {
-		AnoLancamento = anoLancamento;
+	public void setDuracao(String duracao) {
+		this.duracao = duracao;
 	}
 
-	public String[] getGeneros() {
+	public String getGeneros() {
 		return generos;
 	}
 
-	public void setGeneros(String[] generos) {
+	public void setGeneros(String generos) {
 		this.generos = generos;
 	}
 
-	public String[] getAtoresPrincipais() {
+	public String getDiretores() {
+		return diretores;
+	}
+
+	public void setDiretores(String diretores) {
+		this.diretores = diretores;
+	}
+
+	public String getAtoresPrincipais() {
 		return atoresPrincipais;
 	}
 
-	public void setAtoresPrincipais(String[] atoresPrincipais) {
+	public void setAtoresPrincipais(String atoresPrincipais) {
 		this.atoresPrincipais = atoresPrincipais;
-	}
-
-	public String getDiretor() {
-		return diretor;
-	}
-
-	public void setDiretor(String diretor) {
-		this.diretor = diretor;
 	}
 
 	public Double getNotaImdb() {
@@ -95,5 +107,13 @@ public class FilmeModel {
 
 	public void setNotaImdb(Double notaImdb) {
 		this.notaImdb = notaImdb;
+	}
+
+	public String getSinopse() {
+		return sinopse;
+	}
+
+	public void setSinopse(String sinopse) {
+		this.sinopse = sinopse;
 	}
 }
