@@ -32,21 +32,6 @@ public class FilmeModel {
 		this.imagemCartaz = imagemCartaz;
 	}
 
-	public FilmeModel(long id, String nome, int anoLancamento, int classificacaoIndicativa, String duracao,
-			String generos, String diretores, String atoresPrincipais, Double notaImdb, String sinopse) {
-		super();
-		this.id = id;
-		this.nome = nome;
-		this.anoLancamento = anoLancamento;
-		this.classificacaoIndicativa = classificacaoIndicativa;
-		this.duracao = duracao;
-		this.generos = generos;
-		this.diretores = diretores;
-		this.atoresPrincipais = atoresPrincipais;
-		this.notaImdb = notaImdb;
-		this.sinopse = sinopse;
-	}
-
 	@Override
 	public String toString() {
 		return "FilmeModel [id=" + id + ", nome=" + nome + ", anoLancamento=" + anoLancamento
@@ -135,4 +120,12 @@ public class FilmeModel {
 		this.sinopse = sinopse;
 	}
 
+	public String getImagemCartaz() {
+		return imagemCartaz;
+	}
+
+	public void setImagemCartaz(String imagemCartaz) {
+		this.imagemCartaz = imagemCartaz;
+	}
+	
 }
