@@ -14,7 +14,7 @@ public class FilmeModel {
 	String atoresPrincipais;
 	Double notaImdb;
 	String sinopse;
-	String imagemCartaz;
+	String imagemCartaz;     
 
 	public FilmeModel(long id, String nome, int anoLancamento, int classificacaoIndicativa, String duracao,
 			String generos, String diretores, String atoresPrincipais, Double notaImdb, String sinopse,
