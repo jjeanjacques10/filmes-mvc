@@ -16,13 +16,12 @@ import br.com.fiap.repository.FilmeRepository;
 @RequestMapping("/filme")
 public class FilmeController {
 
-	// @Autowired
-	// FilmeRepository repository;
-	FilmeRepository repository = FilmeRepository.getInstance();
+	@Autowired
+	FilmeRepository repository;
 
 	@GetMapping("/form")
 	public String open(@RequestParam String page, @RequestParam(required = false) Long id,
-			@ModelAttribute("filmeModel") FilmeModel filmeModel, Model model) {
+			 Model model) {
 		System.out.println(page);
 		if ("filme-editar".contentEquals(page)) {
 			model.addAttribute("filmeModel", repository.findById(id));
@@ -44,12 +43,18 @@ public class FilmeController {
 		return "filme-detalhe";
 	}
 
-	@GetMapping("/update/{id}")
-	public String openUpdate(@PathVariable("id") long id, Model model,
-			@ModelAttribute("filmeModel") FilmeModel filmeModel) {
+	@PostMapping()
+	public String save(@Valid FilmeModel filmeModel, BindingResult bindingResult,
+			RedirectAttributes redirectAttributes) {
 
-		model.addAttribute("filmeModel", repository.findById(id));
-		return "filme-editar";
+		if (bindingResult.hasErrors()) {
+			return "filme-novo";
+		}
+
+		repository.save(filmeModel);
+		redirectAttributes.addFlashAttribute("messages", "Filme cadastrado com sucesso!");
+
+		return "redirect:/filme";
 	}
 
 	@PutMapping("/{id}")
@@ -57,7 +62,7 @@ public class FilmeController {
 			BindingResult bindingResult, RedirectAttributes redirectAttributes) {
 
 		if (bindingResult.hasErrors()) {
-			return "produto-editar";
+			return "filme-editar";
 		}
 
 		filmeModel.setId(id);

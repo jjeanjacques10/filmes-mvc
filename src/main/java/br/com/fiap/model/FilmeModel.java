@@ -2,6 +2,8 @@ package br.com.fiap.model;
 
 import java.util.Arrays;
 
+import javax.validation.constraints.Size;
+
 public class FilmeModel {
 	long id;
 	String nome;
@@ -48,7 +50,8 @@ public class FilmeModel {
 	public void setId(long id) {
 		this.id = id;
 	}
-
+	
+	@Size(min = 2, max = 40, message = "Nome deve ter no mínimo 2 e no máximo 40 caracteres")
 	public String getNome() {
 		return nome;
 	}
@@ -116,7 +119,8 @@ public class FilmeModel {
 	public String getSinopse() {
 		return sinopse;
 	}
-
+	
+	@Size(min = 1, max = 200, message = "Descricao deve ter no mínimo 1 e no máximo 200 caracteres")
 	public void setSinopse(String sinopse) {
 		this.sinopse = sinopse;
 	}

@@ -5,17 +5,11 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import br.com.fiap.model.FilmeModel;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public class FilmeRepository {
-	private static FilmeRepository instance;
 	private static Map<Long, FilmeModel> filmes;
-
-	public static FilmeRepository getInstance() {
-		if (instance == null) {
-			instance = new FilmeRepository();
-		}
-		return instance;
-	}
 
 	private FilmeRepository() {
 		filmes = new HashMap<Long, FilmeModel>();
