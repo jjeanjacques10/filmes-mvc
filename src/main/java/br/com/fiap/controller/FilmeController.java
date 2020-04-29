@@ -28,5 +28,7 @@ public class FilmeController {
 		model.addAttribute("filme", repository.findById(id));
 		return "filme-detalhe";
 	}
+	
+	
 
 }
