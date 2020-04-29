@@ -38,7 +38,7 @@
 		<!-- Page Features -->
 
 		<div class="row text-center pt-5 d-flex justify-content-center">
-			<a href="${contextPath}/filme/form?page=produto-novo"
+			<a href="${contextPath}/filme/form?page=filme-novo"
 				class="btn btn-success w-50 mt-5">Adicionar novo filme</a>
 		</div>
 
@@ -52,12 +52,14 @@
 								<h4 class="card-title">${filme.nome}</h4>
 							</div>
 							<div class="card-footer">
-								<form:form action="${contextPath}/produto/${filme.id}"
-									method="DELETE">
+								<form:form
+										action="${contextPath}/filme/${filme.id}"
+										method="DELETE">
 									<a href="${contextPath}/filme/form/?page=filme-editar&id=${filme.id}"
 										class="btn btn-primary">Editar</a>
-									<input type="submit" value="Deletar" class="btn btn-danger">
-								</form:form>
+									<input type="submit" value="Excluir"
+											class="btn btn-danger btn-xs">
+									</form:form>
 							</div>
 						</div>
 					</a>

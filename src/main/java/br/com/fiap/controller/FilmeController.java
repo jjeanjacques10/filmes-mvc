@@ -23,7 +23,7 @@ public class FilmeController {
 	@GetMapping("/form")
 	public String open(@RequestParam String page, @RequestParam(required = false) Long id,
 			@ModelAttribute("filmeModel") FilmeModel filmeModel, Model model) {
-
+		System.out.println(page);
 		if ("filme-editar".contentEquals(page)) {
 			model.addAttribute("filmeModel", repository.findById(id));
 		}
@@ -70,9 +70,8 @@ public class FilmeController {
 	@DeleteMapping("/{id}")
 	public String deleteById(@PathVariable("id") long id, RedirectAttributes redirectAttributes) {
 
-		// repository.delete(id);
+		repository.deleteById(id);
 		redirectAttributes.addFlashAttribute("messages", "Produto excluído com sucesso!");
-
-		return "redirect:/produto";
+		return "redirect:/filme";
 	}
 }
