@@ -38,31 +38,33 @@
 		<!-- Page Features -->
 
 		<div class="row text-center pt-5 d-flex justify-content-center">
-			<a href="${contextPath}/filme/form?page=produto-novo" class="btn btn-success w-50 mt-5">Adicionar novo
-				filme</a>
+			<a href="${contextPath}/filme/form?page=produto-novo"
+				class="btn btn-success w-50 mt-5">Adicionar novo filme</a>
 		</div>
 
-		<div class="row text-center pt-5">
+		<div class="row text-center">
 			<c:forEach items="${filmes}" var="filme">
 				<div class="col-lg-3 col-md-6 mb-4 mt-5">
-					<div class="card h-100">
-						<img class="card-img-top" src="${filme.imagemCartaz}" alt="">
-						<div class="card-body">
-							<h4 class="card-title">${filme.nome}</h4>
+					<a href="${contextPath}/filme/${filme.id}">
+						<div class="card h-100">
+							<img class="card-img-top" src="${filme.imagemCartaz}" alt="">
+							<div class="card-body">
+								<h4 class="card-title">${filme.nome}</h4>
+							</div>
+							<div class="card-footer">
+								<form:form action="${contextPath}/produto/${filme.id}"
+									method="DELETE">
+									<a href="${contextPath}/filme/form/?page=filme-editar&id=${filme.id}"
+										class="btn btn-primary">Editar</a>
+									<input type="submit" value="Deletar" class="btn btn-danger">
+								</form:form>
+							</div>
 						</div>
-						<div class="card-footer">
-							<form:form action="${contextPath}/produto/${produto.id}"
-								method="DELETE">
-								<a href="${contextPath}/filme/${filme.id}"
-									class="btn btn-primary">Editar</a>
-								<input type="submit" value="Deletar" class="btn btn-danger">
-							</form:form>
-						</div>
-					</div>
+					</a>
 				</div>
-			</c:forEach>
-		</div>
-		<!-- /.row 1-->
+		</c:forEach>
+	</div>
+	<!-- /.row 1-->
 	</div>
 	<!-- /.container -->
 
