@@ -71,7 +71,7 @@
 								<label for="classificacaoIndicativa" class="mb-2">Classificação
 									indicativa</label>
 								<form:input type="text" path="classificacaoIndicativa"
-									id="classificacaoIndicativa" class="form-control" value="12"
+									id="classificacaoIndicativa" class="form-control" maxlength="2" value="12"
 									 />
 								<font color="red"><form:errors
 										path="classificacaoIndicativa" /></font><br />

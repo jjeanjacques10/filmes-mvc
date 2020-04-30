@@ -39,14 +39,6 @@ public class FilmeModel {
 		this.imagemCartaz = imagemCartaz;
 	}
 
-	@Override
-	public String toString() {
-		return "FilmeModel [id=" + id + ", nome=" + nome + ", anoLancamento=" + anoLancamento
-				+ ", classificacaoIndicativa=" + classificacaoIndicativa + ", duracao=" + duracao + ", generos="
-				+ generos + ", diretores=" + diretores + ", atoresPrincipais=" + atoresPrincipais + ", notaImdb="
-				+ notaImdb + ", sinopse=" + sinopse + "]";
-	}
-
 	public long getId() {
 		return id;
 	}
@@ -65,6 +57,7 @@ public class FilmeModel {
 	}
 
 	@Min(value = 1800, message = "Ano de lançamento deve ser no mínimo 1800")
+	@Max(value = 2020, message = "Ano de lançamento deve ser no máximo 2020")
 	public int getAnoLancamento() {
 		return anoLancamento;
 	}
@@ -73,7 +66,8 @@ public class FilmeModel {
 		this.anoLancamento = anoLancamento;
 	}
 
-	@Min(value = 1, message = "Classificação indicativa deve ser um número maior que zero")
+	@Min(value = 0, message = "Classificação indicativa deve ser no mínimo 0")
+	@Max(value = 18, message = "Classificação indicativa deve ser no máximo 18")
 	public int getClassificacaoIndicativa() {
 		return classificacaoIndicativa;
 	}
@@ -144,5 +138,4 @@ public class FilmeModel {
 	public void setImagemCartaz(String imagemCartaz) {
 		this.imagemCartaz = imagemCartaz;
 	}
-
 }
