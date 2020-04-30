@@ -30,6 +30,8 @@
 	<!-- Header -->
 	<nav class=" navbar-dark bg-dark fixed-top">
 		<div class="container">
+			<p class="navbar-brand ml-5 pt-2" style="font-weight: bold">FIAPLIX
+			</p>
 			<p class="navbar-brand">Lista de filmes</p>
 		</div>
 	</nav>
@@ -75,8 +77,10 @@
 
 	<!-- Footer -->
 	<nav class=" navbar-dark bg-dark fixed-bottom mt-5">
-		<div class="container">
-			<p class="navbar-brand"></p>
+		<div class="container" style="text-align: center;">
+			<p class="navbar-brand" style="font-size: 12px;">Desenvolvido por: Jean Jacques Barros | Ahalan Windson
+				| Gabriel Petillo | Vitor Rico | Matheus Barros</p>
+
 		</div>
 	</nav>
 

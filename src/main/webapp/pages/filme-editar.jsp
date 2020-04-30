@@ -28,15 +28,22 @@
 	<!-- Header -->
 	<nav class=" navbar-dark bg-dark fixed-top">
 		<div class="container">
-			<p class="navbar-brand">Editar Filme</p>
+			<a href="${contextPath}/filme/"
+				class="btn btn-primary mt-2 mb-2 mr-5">Voltar</a>
+			<p class="navbar-brand ml-5 pt-2" style="font-weight: bold">FIAPLIX
+			</p>
+			<p class="navbar-brand">${filmeModel.nome}</p>
 		</div>
 	</nav>
-	
+
 	<!-- Page Content -->
 	<div class="container">
 
 		<!-- Page Features -->
 		<div class="row text-center pt-5">
+			<div class="container">
+				<h2 class="navbar-brand ml-5 mt-5 pt-2">Editar Filme</h2>
+			</div>
 
 			<div class="col-md-6 mb-4 mt-4">
 				<div class="card h-100">
@@ -64,28 +71,27 @@
 							<div class="form-group mb-2">
 								<label for="imagemCartaz" class="mb-2">URL da Imagem</label>
 								<form:input type="text" path="imagemCartaz" id="imagemCartaz"
-									class="form-control"/>
+									class="form-control" />
 							</div>
 							<div class="form-group mb-2">
 								<label for="anoLancamento" class="mb-2">Ano de
 									lançamento</label>
-								<form:input type="number" path="anoLancamento" id="anoLancamento"
-									class="form-control" />
+								<form:input type="number" path="anoLancamento"
+									id="anoLancamento" class="form-control" />
 								<font color="red"><form:errors path="anoLancamento" /></font><br />
 							</div>
 							<div class="form-group mb-2">
 								<label for="classificacaoIndicativa" class="mb-2">Classificação
 									indicativa</label>
 								<form:input type="text" path="classificacaoIndicativa"
-									id="classificacaoIndicativa" class="form-control"
-									 />
+									id="classificacaoIndicativa" class="form-control" />
 								<font color="red"><form:errors
 										path="classificacaoIndicativa" /></font><br />
 							</div>
 							<div class="form-group mb-2">
 								<label for="duracao" class="mb-2">Duração</label>
 								<form:input type="text" path="duracao" id="duracao"
-									class="form-control"  />
+									class="form-control" />
 								<font color="red"><form:errors path="duracao" /></font><br />
 							</div>
 							<div class="form-group mb-2">

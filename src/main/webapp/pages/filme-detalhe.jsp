@@ -28,7 +28,10 @@
 	<!-- Header -->
 	<nav class=" navbar-dark bg-dark fixed-top">
 		<div class="container">
-			<p class="navbar-brand">Editar Filme</p>
+			<a href="${contextPath}/filme/"
+				class="btn btn-primary mt-2 mb-2 mr-5">Voltar</a>
+			<p class="navbar-brand ml-5 pt-2" style="font-weight: bold">FIAPLIX</p>
+			<p class="navbar-brand">${filme.nome}</p>
 		</div>
 	</nav>
 
@@ -37,7 +40,6 @@
 
 		<!-- Page Features -->
 		<div class="row text-center pt-5">
-
 			<div class="col-md-6 mb-5 mt-4">
 				<div class="card h-100 mt-3 pb-4">
 					<img class="card-img-top" src="${filme.imagemCartaz}" alt="">
@@ -47,11 +49,10 @@
 			<div class="col-md-6 mb-4 mt-4">
 				<div class="card h-90">
 					<div class="card-body text-left">
-						<p>Nome do filme:</p>
 						<h3>
 							<b>${filme.nome}</b>
 						</h3>
-						<br> <br>
+						<br>
 						<p>
 							Ano de lançamento: <b>${filme.anoLancamento}</b>
 						</p>

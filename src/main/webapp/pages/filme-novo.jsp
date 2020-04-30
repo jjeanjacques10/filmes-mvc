@@ -28,7 +28,9 @@
 	<!-- Header -->
 	<nav class=" navbar-dark bg-dark fixed-top">
 		<div class="container">
-			<p class="navbar-brand">Novo Filme</p>
+			<a href="${contextPath}/filme/" class="btn btn-primary mt-2 mb-2 mr-5">Voltar</a>
+			
+			<p class="navbar-brand ml-5 pt-2" style="font-weight: bold">FIAPLIX</p>
 		</div>
 	</nav>
 
@@ -36,7 +38,8 @@
 	<div class="container">
 
 		<!-- Page Features -->
-		<div class="row text-center pt-5">
+		<div class="row text-center pt-5 d-flex justify-content-center">
+		<div class="container"><h2 class="navbar-brand ml-5 mt-5 pt-2">Novo Filme</h2></div>
 
 			<div class="col-md-6 mb-4 mt-4">
 				<div class="card h-100">
@@ -58,7 +61,7 @@
 							<div class="form-group mb-2">
 								<label for="imagemCartaz" class="mb-2">URL da Imagem</label>
 								<form:input type="text" path="imagemCartaz" id="imagemCartaz"
-									class="form-control"/>
+									class="form-control" value="https://www.nato-pa.int/sites/default/files/default_images/default-image.jpg"/>
 							</div>
 							<div class="form-group mb-2">
 								<label for="anoLancamento" class="mb-2">Ano de
