@@ -59,13 +59,18 @@
 							<div class="form-group mb-2">
 								<label for="nome" class="mb-2">Nome do filme</label>
 								<form:input type="text" path="nome" id="nome"
-									class="form-control" maxlength="50" size="50" />
+									class="form-control" maxlength="100" size="100" />
+							</div>
+							<div class="form-group mb-2">
+								<label for="imagemCartaz" class="mb-2">URL da Imagem</label>
+								<form:input type="text" path="imagemCartaz" id="imagemCartaz"
+									class="form-control"/>
 							</div>
 							<div class="form-group mb-2">
 								<label for="anoLancamento" class="mb-2">Ano de
 									lançamento</label>
-								<form:input type="text" path="anoLancamento" id="anoLancamento"
-									class="form-control" maxlength="50" size="50" />
+								<form:input type="number" path="anoLancamento" id="anoLancamento"
+									class="form-control" />
 								<font color="red"><form:errors path="anoLancamento" /></font><br />
 							</div>
 							<div class="form-group mb-2">
@@ -73,34 +78,34 @@
 									indicativa</label>
 								<form:input type="text" path="classificacaoIndicativa"
 									id="classificacaoIndicativa" class="form-control"
-									maxlength="50" size="50" />
+									 />
 								<font color="red"><form:errors
 										path="classificacaoIndicativa" /></font><br />
 							</div>
 							<div class="form-group mb-2">
 								<label for="duracao" class="mb-2">Duração</label>
 								<form:input type="text" path="duracao" id="duracao"
-									class="form-control" maxlength="50" size="50" />
+									class="form-control"  />
 								<font color="red"><form:errors path="duracao" /></font><br />
 							</div>
 							<div class="form-group mb-2">
 								<label for="generos" class="mb-2">Generos</label>
 								<form:input type="text" path="generos" id="generos"
-									class="form-control" maxlength="50" size="50" />
+									class="form-control" maxlength="200" size="200" />
 								<font color="red"><form:errors path="generos" /></font><br />
 							</div>
 							<div class="form-group mb-2">
 								<label for="diretores" class="mb-2">Diretores</label>
 								<form:input type="text" path="diretores" id="diretores"
-									class="form-control" maxlength="50" size="50" />
+									class="form-control" maxlength="200" size="200" />
 								<font color="red"><form:errors path="diretores" /></font><br />
 							</div>
 							<div class="form-group mb-2">
 								<label for="atoresPrincipais" class="mb-2">Atores
 									principais</label>
 								<form:input type="text" path="atoresPrincipais"
-									id="atoresPrincipais" class="form-control" maxlength="50"
-									size="50" />
+									id="atoresPrincipais" class="form-control" maxlength="200"
+									size="200" />
 								<font color="red"><form:errors path="atoresPrincipais" /></font><br />
 							</div>
 							<div class="form-group mb-2">
@@ -112,7 +117,7 @@
 							<div class="form-group mb-2">
 								<label for="sinopse" class="mb-2">Sinopse</label>
 								<form:textarea id="sinopse" class="form-control" path="sinopse"
-									rows="4" cols="100" />
+									rows="6" cols="100" />
 								<font color="red"><form:errors path="sinopse" /></font><br />
 							</div>
 							<div class="form-group">

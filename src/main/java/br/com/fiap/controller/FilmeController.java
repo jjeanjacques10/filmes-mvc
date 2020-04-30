@@ -17,12 +17,12 @@ import br.com.fiap.repository.FilmeRepository;
 public class FilmeController {
 
 	@Autowired
-	FilmeRepository repository;
+	public FilmeRepository repository;
 
 	@GetMapping("/form")
 	public String open(@RequestParam String page, @RequestParam(required = false) Long id,
-			 Model model) {
-		System.out.println(page);
+			@ModelAttribute("filmeModel") FilmeModel filmeModel, Model model) {
+
 		if ("filme-editar".contentEquals(page)) {
 			model.addAttribute("filmeModel", repository.findById(id));
 		}

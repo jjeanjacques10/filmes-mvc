@@ -1,7 +1,8 @@
 package br.com.fiap.model;
 
-import java.util.Arrays;
-
+import javax.validation.constraints.DecimalMin;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.Size;
 
 public class FilmeModel {
@@ -15,8 +16,11 @@ public class FilmeModel {
 	String atoresPrincipais;
 	Double notaImdb;
 	String sinopse;
-	String imagemCartaz;   
-	private String OPetilloDisseParaNaoZuarEntaoVamosFazerUmProjetoMuitoSerioSemPiadaDePintoParaManterOProfissionalismoGrato;
+	String imagemCartaz;
+
+	public FilmeModel() {
+
+	}
 
 	public FilmeModel(long id, String nome, int anoLancamento, int classificacaoIndicativa, String duracao,
 			String generos, String diretores, String atoresPrincipais, Double notaImdb, String sinopse,
@@ -50,8 +54,8 @@ public class FilmeModel {
 	public void setId(long id) {
 		this.id = id;
 	}
-	
-	@Size(min = 2, max = 40, message = "Nome deve ter no mínimo 2 e no máximo 40 caracteres")
+
+	@Size(min = 2, max = 100, message = "Nomes deve ter no mínimo 2 e no máximo 100 caracteres")
 	public String getNome() {
 		return nome;
 	}
@@ -60,6 +64,7 @@ public class FilmeModel {
 		this.nome = nome;
 	}
 
+	@Min(value = 1800, message = "Ano de lançamento deve ser no mínimo 1800")
 	public int getAnoLancamento() {
 		return anoLancamento;
 	}
@@ -68,14 +73,16 @@ public class FilmeModel {
 		this.anoLancamento = anoLancamento;
 	}
 
+	@Min(value = 1, message = "Classificação indicativa deve ser um número maior que zero")
 	public int getClassificacaoIndicativa() {
 		return classificacaoIndicativa;
 	}
-
+	
 	public void setClassificacaoIndicativa(int classificacaoIndicativa) {
 		this.classificacaoIndicativa = classificacaoIndicativa;
 	}
 
+	@Size(min = 2, max = 9, message = "Duracao deve ter no mínimo 2 e no máximo 9 caracteres")
 	public String getDuracao() {
 		return duracao;
 	}
@@ -84,6 +91,7 @@ public class FilmeModel {
 		this.duracao = duracao;
 	}
 
+	@Size(min = 2, max = 200, message = "Generos deve ter no mínimo 2 e no máximo 200 caracteres")
 	public String getGeneros() {
 		return generos;
 	}
@@ -92,6 +100,7 @@ public class FilmeModel {
 		this.generos = generos;
 	}
 
+	@Size(min = 2, max = 200, message = "Diretores deve ter no mínimo 2 e no máximo 200 caracteres")
 	public String getDiretores() {
 		return diretores;
 	}
@@ -100,6 +109,7 @@ public class FilmeModel {
 		this.diretores = diretores;
 	}
 
+	@Size(min = 2, max = 200, message = "Atores principais deve ter no mínimo 2 e no máximo 200 caracteres")
 	public String getAtoresPrincipais() {
 		return atoresPrincipais;
 	}
@@ -108,6 +118,8 @@ public class FilmeModel {
 		this.atoresPrincipais = atoresPrincipais;
 	}
 
+	@DecimalMin(value = "0.1", message = "Nota deve ser acima de 0.1")
+	@Max(value = 10, message = "Nota deve ser no máximo 10")
 	public Double getNotaImdb() {
 		return notaImdb;
 	}
@@ -116,11 +128,11 @@ public class FilmeModel {
 		this.notaImdb = notaImdb;
 	}
 
+	@Size(min = 1, max = 500, message = "Sinopse deve ter no mínimo 1 e no máximo 500 caracteres")
 	public String getSinopse() {
 		return sinopse;
 	}
-	
-	@Size(min = 1, max = 200, message = "Descricao deve ter no mínimo 1 e no máximo 200 caracteres")
+
 	public void setSinopse(String sinopse) {
 		this.sinopse = sinopse;
 	}
@@ -132,5 +144,5 @@ public class FilmeModel {
 	public void setImagemCartaz(String imagemCartaz) {
 		this.imagemCartaz = imagemCartaz;
 	}
-	
+
 }

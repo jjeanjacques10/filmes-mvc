@@ -3,6 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ page isErrorPage="true"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -52,54 +53,73 @@
 							<div class="form-group mb-2">
 								<label for="nome" class="mb-2">Nome do filme</label>
 								<form:input type="text" path="nome" id="nome"
-									class="form-control" maxlength="50" size="50" />
-								<font color="red"><form:errors path="nome" /></font><br />
+									class="form-control" maxlength="100" size="100" />
+							</div>
+							<div class="form-group mb-2">
+								<label for="imagemCartaz" class="mb-2">URL da Imagem</label>
+								<form:input type="text" path="imagemCartaz" id="imagemCartaz"
+									class="form-control"/>
 							</div>
 							<div class="form-group mb-2">
 								<label for="anoLancamento" class="mb-2">Ano de
-									lançamento</label> <input type="number" class="form-control "
-									id="anoLancamento" value="2014">
+									lançamento</label>
+								<form:input type="number" path="anoLancamento" id="anoLancamento"
+									class="form-control" />
+								<font color="red"><form:errors path="anoLancamento" /></font><br />
 							</div>
 							<div class="form-group mb-2">
 								<label for="classificacaoIndicativa" class="mb-2">Classificação
-									indicativa</label> <input type="number" class="form-control "
-									id="classificacaoIndicativa" value="10">
+									indicativa</label>
+								<form:input type="text" path="classificacaoIndicativa"
+									id="classificacaoIndicativa" class="form-control" value="12"
+									 />
+								<font color="red"><form:errors
+										path="classificacaoIndicativa" /></font><br />
 							</div>
 							<div class="form-group mb-2">
-								<label for="duracao" class="mb-2">Duração</label> <input
-									type="text" class="form-control " id="duracao" value="2h49min">
+								<label for="duracao" class="mb-2">Duração</label>
+								<form:input type="text" path="duracao" id="duracao"
+									class="form-control"  />
+								<font color="red"><form:errors path="duracao" /></font><br />
 							</div>
 							<div class="form-group mb-2">
-								<label for="generos" class="mb-2">Generos</label> <input
-									type="text" class="form-control " id="generos"
-									value="Adventure, Drama, Sci-Fi">
+								<label for="generos" class="mb-2">Generos</label>
+								<form:input type="text" path="generos" id="generos"
+									class="form-control" maxlength="200" size="200" />
+								<font color="red"><form:errors path="generos" /></font><br />
 							</div>
 							<div class="form-group mb-2">
-								<label for="diretores" class="mb-2">Diretores</label> <input
-									type="text" class="form-control " id="diretores"
-									value="Christopher Nolan">
+								<label for="diretores" class="mb-2">Diretores</label>
+								<form:input type="text" path="diretores" id="diretores"
+									class="form-control" maxlength="200" size="200" />
+								<font color="red"><form:errors path="diretores" /></font><br />
 							</div>
 							<div class="form-group mb-2">
 								<label for="atoresPrincipais" class="mb-2">Atores
-									principais</label> <input type="text" class="form-control "
-									id="atoresPrincipais"
-									value="Matthew McConaughey, Anne Hathaway, Jessica Chastain">
+									principais</label>
+								<form:input type="text" path="atoresPrincipais"
+									id="atoresPrincipais" class="form-control" maxlength="200"
+									size="200" />
+								<font color="red"><form:errors path="atoresPrincipais" /></font><br />
 							</div>
 							<div class="form-group mb-2">
-								<label for="notaImdb" class="mb-2">Nota Imdb</label> <input
-									type="number" step="0.1" class="form-control " id="notaImdb"
-									value="8,6">
+								<label for="notaImdb" class="mb-2">Nota Imdb</label>
+								<form:input type="number" step="0.1" path="notaImdb"
+									id="notaImdb" class="form-control" />
+								<font color="red"><form:errors path="notaImdb" /></font><br />
 							</div>
 							<div class="form-group mb-2">
 								<label for="sinopse" class="mb-2">Sinopse</label>
-								<textarea class="form-control " id="sinopse">A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.</textarea>
+								<form:textarea id="sinopse" class="form-control" path="sinopse"
+									rows="6" cols="100" />
+								<font color="red"><form:errors path="sinopse" /></font><br />
 							</div>
 							<div class="form-group">
 								<input type="text" id="imagemCartaz"
 									value="https://m.media-amazon.com/images/M/MV5BZjdkOTU3MDktN2IxOS00OGEyLWFmMjktY2FiMmZkNWIyODZiXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SY1000_SX675_AL_.jpg"
 									hidden>
 							</div>
-							<button type="submit" class="btn btn-lg btn-primary btn-block">Salvar</button>
+							<button type="submit" class="btn btn-lg btn-primary btn-block">Cadastrar</button>
 						</form:form>
 					</div>
 				</div>

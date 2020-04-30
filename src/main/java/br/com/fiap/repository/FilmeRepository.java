@@ -25,7 +25,7 @@ public class FilmeRepository {
 				"Ethan Maniquis e Robert Rodriguez", "Danny trejo, Michelle Rodriguez, Robert De Niro ", 6.6,
 				"Depois de quase ser morto durante uma briga violenta com um poderoso traficante, um ex-agente federal mexicano, conhecido como Machete, percorre as ruas do Texas trabalhando como operário e vigilante. Contratado para cometer um assassinato, ele é traído e forçado a fugir. Machete parte em busca de vingança e abre caminho com sangue, balas e corações partidos na sua jornada para acertar as contas.",
 				"https://m.media-amazon.com/images/M/MV5BZWUxODc2NmItNThkNS00Mzc4LThlYTQtOTYwZjVhYjRiNmMwXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX182_CR0,0,182,268_AL_.jpg"));
-		filmes.put(4l, new FilmeModel(4l, "Your Name", 2016, 0, "1h 46min", "Animação, Drama e fantasia",
+		filmes.put(4l, new FilmeModel(4l, "Your Name", 2016, 10, "1h 46min", "Animação, Drama e fantasia",
 				"Makoto Shinkai", "Ryûnosuke Kamiki, Mone Kamishiraishi, Ryô Narita", 8.4,
 				"Mitsuha é a filha do prefeito de uma pequena cidade, mas sonha em tentar a sorte em Tóquio. Taki trabalha em um restaurante em Tóquio e deseja largar o seu emprego. Os dois não se conhecem, mas estão conectados pelas imagens de seus sonhos.",
 				"https://m.media-amazon.com/images/M/MV5BODRmZDVmNzUtZDA4ZC00NjhkLWI2M2UtN2M0ZDIzNDcxYThjL2ltYWdlXkEyXkFqcGdeQXVyNTk0MzMzODA@._V1_UX182_CR0,0,182,268_AL_.jpg"));
@@ -37,7 +37,7 @@ public class FilmeRepository {
 				"Anthony Russo, Joe Russo", " Robert Downey Jr., Chris Evans, Mark Ruffalo", 8.4,
 				"Após Thanos eliminar metade das criaturas vivas, os Vingadores têm de lidar com a perda de amigos e entes queridos. Com Tony Stark vagando perdido no espaço sem água e comida, Steve Rogers e Natasha Romanov lideram a resistência contra o titã louco.",
 				"https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_UX182_CR0,0,182,268_AL_.jpg"));
-		filmes.put(7l, new FilmeModel(7l, "Marley & Eu", 2008, 0, "1h 51min", "Comédia, drama e família",
+		filmes.put(7l, new FilmeModel(7l, "Marley & Eu", 2008, 10, "1h 51min", "Comédia, drama e família",
 				"David Frankel", "Owen Wilson, Jennifer Aniston, Eric Dane", 7.1,
 				"Os recém-casados John e Jenny Grogan se mudam de Michigan para a Flórida, onde eles compram sua primeira casa e encontram trabalhos em competitivos jornais. Mais tarde, o casal adota Marley, um adorável filhote de labrador amarelo. Marley cresce rapidamente e se torna bastante travesso. Ainda assim, mesmo enquanto ele está destruindo a mobília e não obedece, ele sempre consegue alegrar John, Jenny e sua crescente família.",
 				"https://m.media-amazon.com/images/M/MV5BYTlkYmM2NjAtMDkyZi00M2JiLThjZmItMjUzZDhiMDg2NGJmXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_UY268_CR0,0,182,268_AL_.jpg"));
