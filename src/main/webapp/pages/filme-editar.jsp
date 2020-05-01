@@ -84,14 +84,14 @@
 								<label for="classificacaoIndicativa" class="mb-2">Classificação
 									indicativa</label>
 								<form:input type="text" path="classificacaoIndicativa"
-									id="classificacaoIndicativa" class="form-control" />
+									id="classificacaoIndicativa" class="form-control" maxlength="2" />
 								<font color="red"><form:errors
 										path="classificacaoIndicativa" /></font><br />
 							</div>
 							<div class="form-group mb-2">
 								<label for="duracao" class="mb-2">Duração</label>
 								<form:input type="text" path="duracao" id="duracao"
-									class="form-control" />
+									class="form-control" maxlength="9" />
 								<font color="red"><form:errors path="duracao" /></font><br />
 							</div>
 							<div class="form-group mb-2">
@@ -117,7 +117,8 @@
 							<div class="form-group mb-2">
 								<label for="notaImdb" class="mb-2">Nota Imdb</label>
 								<form:input type="number" step="0.1" path="notaImdb"
-									id="notaImdb" class="form-control" />
+									id="notaImdb" class="form-control" maxlength="2"
+									size="4"/>
 								<font color="red"><form:errors path="notaImdb" /></font><br />
 							</div>
 							<div class="form-group mb-2">

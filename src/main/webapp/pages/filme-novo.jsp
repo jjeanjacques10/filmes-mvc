@@ -67,7 +67,7 @@
 								<label for="anoLancamento" class="mb-2">Ano de
 									lançamento</label>
 								<form:input type="number" path="anoLancamento" id="anoLancamento"
-									class="form-control" />
+									class="form-control" value="2020" min="1800" />
 								<font color="red"><form:errors path="anoLancamento" /></font><br />
 							</div>
 							<div class="form-group mb-2">
@@ -82,7 +82,7 @@
 							<div class="form-group mb-2">
 								<label for="duracao" class="mb-2">Duração</label>
 								<form:input type="text" path="duracao" id="duracao"
-									class="form-control"  />
+									class="form-control" maxlength="9"  />
 								<font color="red"><form:errors path="duracao" /></font><br />
 							</div>
 							<div class="form-group mb-2">
@@ -108,13 +108,13 @@
 							<div class="form-group mb-2">
 								<label for="notaImdb" class="mb-2">Nota Imdb</label>
 								<form:input type="number" step="0.1" path="notaImdb"
-									id="notaImdb" class="form-control" />
+									id="notaImdb" class="form-control" value="5"/>
 								<font color="red"><form:errors path="notaImdb" /></font><br />
 							</div>
 							<div class="form-group mb-2">
 								<label for="sinopse" class="mb-2">Sinopse</label>
 								<form:textarea id="sinopse" class="form-control" path="sinopse"
-									rows="6" cols="100" />
+									rows="6" cols="100"  maxlength="500" />
 								<font color="red"><form:errors path="sinopse" /></font><br />
 							</div>
 							<div class="form-group">

@@ -57,7 +57,6 @@ public class FilmeModel {
 	}
 
 	@Min(value = 1800, message = "Ano de lançamento deve ser no mínimo 1800")
-	@Max(value = 2020, message = "Ano de lançamento deve ser no máximo 2020")
 	public int getAnoLancamento() {
 		return anoLancamento;
 	}
