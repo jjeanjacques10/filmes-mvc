@@ -16,7 +16,7 @@ Faculdade de informática e administração paulista
 
 ## :memo: Licença
 
-MIT
+[MIT](https://choosealicense.com/licenses/mit/)
 
 # Author
 
