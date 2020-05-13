@@ -54,15 +54,15 @@
 						</h3>
 						<br>
 						<p>
-							Ano de lançamento: <b>${filme.anoLancamento}</b>
+							Ano de lanï¿½amento: <b>${filme.anoLancamento}</b>
 						</p>
 						<br>
 						<p>
-							Classificação indicativa: <b>${filme.classificacaoIndicativa}</b>
+							Classificaï¿½ï¿½o indicativa: <b>${filme.classificacaoIndicativa}</b>
 						</p>
 						<br>
 						<p>
-							Duração: <b>${filme.duracao}</b>
+							Duraï¿½ï¿½o: <b>${filme.duracao}</b>
 						</p>
 						<br>
 						<p>
