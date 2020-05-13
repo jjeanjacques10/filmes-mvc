@@ -65,13 +65,13 @@
 							</div>
 							<div class="form-group mb-2">
 								<label for="anoLancamento" class="mb-2">Ano de
-									lançamento</label>
+									lanï¿½amento</label>
 								<form:input type="number" path="anoLancamento" id="anoLancamento"
 									class="form-control" value="2020" min="1800" />
 								<font color="red"><form:errors path="anoLancamento" /></font><br />
 							</div>
 							<div class="form-group mb-2">
-								<label for="classificacaoIndicativa" class="mb-2">Classificação
+								<label for="classificacaoIndicativa" class="mb-2">Classificaï¿½ï¿½o
 									indicativa</label>
 								<form:input type="text" path="classificacaoIndicativa"
 									id="classificacaoIndicativa" class="form-control" maxlength="2" value="12"
@@ -80,7 +80,7 @@
 										path="classificacaoIndicativa" /></font><br />
 							</div>
 							<div class="form-group mb-2">
-								<label for="duracao" class="mb-2">Duração</label>
+								<label for="duracao" class="mb-2">Duraï¿½ï¿½o</label>
 								<form:input type="text" path="duracao" id="duracao"
 									class="form-control" maxlength="9"  />
 								<font color="red"><form:errors path="duracao" /></font><br />
