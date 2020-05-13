@@ -75,7 +75,7 @@
 							</div>
 							<div class="form-group mb-2">
 								<label for="anoLancamento" class="mb-2">Ano de
-									lan�amento</label>
+									lançamento</label>
 								<form:input type="number" path="anoLancamento"
 									id="anoLancamento" class="form-control" />
 								<font color="red"><form:errors path="anoLancamento" /></font><br />
