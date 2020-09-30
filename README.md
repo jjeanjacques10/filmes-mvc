@@ -20,4 +20,4 @@ Faculdade de informática e administração paulista
 
 # Author
 
-Developed by [Matheus Lopes de Barros](https://www.linkedin.com/in/matheus-barros-a1646715a/) :👨🏼‍💻:
+Developed by [Jean Jaques Barros](https://github.com/jjeanjacques10) :rocket:
