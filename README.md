@@ -20,4 +20,4 @@ Faculdade de informática e administração paulista
 
 # Author
 
-Developed by [Jean Jacques Barros](https://www.linkedin.com/in/jjean-jacques10/) :rocket:
+Developed by [Jean Jacques Barros](https://www.linkedin.com/in/matheus-barros-a1646715a/) :👨🏼‍💻:
